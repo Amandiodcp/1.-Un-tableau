@@ -4,29 +4,29 @@ class Program
 {
     static void Main()
     {
-        int[] tableau1 = { 1, 2, 3, 4, 5 };
-        int[] tableau2 = { 6, 7, 8, 9, 10 };
+        int[] tab1 = { 1, 2, 3, 4, 5 };
+        int[] tab2 = { 6, 7, 8, 9, 10 };
 
-        int[] tableau3 = new int[tableau1.Length + tableau2.Length];
+        int[] tab3 = new int[tab1.Length + tab2.Length];
 
-        Array.Copy(tableau1, tableau3, tableau1.Length);
-        Array.Copy(tableau2, 0, tableau3, tableau1.Length, tableau2.Length);
+        Array.Copy(tab1, tab3, tab1.Length);
+        Array.Copy(tab2, 0, tab3, tab1.Length, tab2.Length);
 
-        Console.WriteLine("Tableau 1:");
-        AfficherTableau(tableau1);
+        Console.WriteLine("Tab 1:");
+        AfficherTab(tab1);
 
-        Console.WriteLine("\nTableau 2:");
-        AfficherTableau(tableau2);
+        Console.WriteLine("\nTab 2:");
+        AfficherTab(tab2);
 
-        Console.WriteLine("\nTableau 3 (concaténation de Tableau 1 et Tableau 2):");
-        AfficherTableau(tableau3);
+        Console.WriteLine("\nTab 3 (concaténation de Tab 1 et Tab 2):");
+        AfficherTab(tab3);
     }
 
-    static void AfficherTableau(int[] tableau)
+    static void AfficherTab(int[] tab)
     {
-        for (int i = 0; i < tableau.Length; i++)
+        for (int i = 0; i < tab.Length; i++)
         {
-            Console.Write(tableau[i] + " ");
+            Console.Write(tab[i] + " ");
         }
         Console.WriteLine();
     }
